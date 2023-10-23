@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Table 1</title>
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"-->
+<!--          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container-fluid text-center">
+    <h4> Profit List </h4>
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"-->
+<!--            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"-->
+<!--            crossorigin="anonymous"></script>-->
+</div>
+
+<div class="snippet-container mtb-3">
+    <div class="table-responsive">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Attribute</th>
+            <th>January</th>
+            <th>February</th>
+            <th>March</th>
+            <th>April</th>
+            <th>May</th>
+            <th>June</th>
+            <th>July</th>
+            <th>August</th>
+            <th>September</th>
+            <th>October</th>
+            <th>November</th>
+            <th>December</th>
+            <th>Year</th>
+            <th>Setting</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="prof:${listProfit}">
+
+            <td th:text="${prof.article}">article</td>
+            <td th:text="${prof.january}"></td>
+            <td th:text="${prof.february}"></td>
+            <td th:text="${prof.march}"></td>
+            <td th:text="${prof.april}"></td>
+            <td th:text="${prof.may}"></td>
+            <td th:text="${prof.june}"></td>
+            <td th:text="${prof.july}"></td>
+            <td th:text="${prof.august}"></td>
+            <td th:text="${prof.september}"></td>
+            <td th:text="${prof.october}"></td>
+            <td th:text="${prof.november}"></td>
+            <td th:text="${prof.december}"></td>
+            <td th:text="${prof.year}"></td>
+            <td>
+                <a class="h4">Edit</a>
+                <a class="h4">Delete</a>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+</div>
+</body>
+</html>
